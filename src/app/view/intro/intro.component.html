@@ -1,0 +1,43 @@
+<app-menue></app-menue>
+
+<section id="explain">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div></div>
+        <h2>{{ 'intro.toolName' | translate }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-content">
+          <h3>{{'intro.explain.title' | translate}}</h3>
+          <p [innerHTML]="'intro.explain.p1' | translate"></p>
+          <p [innerHTML]="'intro.explain.p2' | translate"></p>
+          <p [innerHTML]="'intro.explain.p3' | translate"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="form" class="zebra">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2>{{'intro.form.title' | translate}}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <app-form></app-form>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="form">
+  <div class="container">
+    <app-explainer></app-explainer>
+  </div>
+</section>
+<app-footer></app-footer>

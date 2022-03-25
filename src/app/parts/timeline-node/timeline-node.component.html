@@ -1,0 +1,34 @@
+<div class="node-wrapper" [class.goal]="setGoalAtteined">
+
+    <div [class.srink]="coreService.timeLine[nodeData.index].currentTime === 0" class="node-info">
+        <span class="node-name">{{ 'node-shortened.' + nodeData.type | translate }}</span>
+        <span *ngIf="coreService.timeLine[nodeData.index].currentTime" class="counter">{{coreService.timeLine[nodeData.index].currentTime | counter}}</span>
+    </div>
+
+    <svg class="circle-chart" attr.viewBox="0 0 {{viewBox}} {{viewBox}}" preserveAspectRatio="xMinYMin meet" xmlns="http://www.w3.org/2000/svg">
+        <circle
+            [attr.cx]="cxCy" 
+            [attr.cy]="cxCy" 
+            [attr.r]="radius" 
+            [attr.stroke-width]="strokeWidth"
+
+            stroke="#efefef" 
+            fill="none" 
+        />
+        <circle 
+            [attr.cx]="cxCy" 
+            [attr.cy]="cxCy" 
+            [attr.r]="radius" 
+            [attr.stroke-width]="strokeWidth"
+            [attr.stroke-dasharray]="circumference"
+            [attr.stroke-dashoffset]="offSet"
+
+
+            stroke-linecap="round" 
+            [attr.stroke]="coreService.timeLine[nodeData.index].currentTime ? 'rgba(51, 101, 138,1)' : 'rgba(103, 224, 198,1)'" 
+            
+            attr.transform="rotate({{initialRotate}} {{cxCy}} {{cxCy}})" 
+        />
+
+    </svg>
+</div>

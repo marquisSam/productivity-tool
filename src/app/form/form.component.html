@@ -1,0 +1,137 @@
+<div class="form-wrapper section-content">
+
+
+  <form [formGroup]="toolConfigForm" (ngSubmit)="onSubmit()">
+
+    <div class="start-row">
+
+      <label>
+        <span>{{'intro.form.fit' | translate}}</span>
+        <input type="number" formControlName="pomodoroCount">
+        <span [innerHTML]="'intro.form.workBlock' | translate"></span>
+      </label>
+
+
+      <button type="submit" [disabled]="!toolConfigForm.valid">Go!</button>
+
+    </div>
+
+    <div class="err" *ngIf="toolConfigForm.controls['pomodoroCount'].status === 'INVALID'">
+      <div *ngIf="toolConfigForm.controls['pomodoroCount'].errors['max']">
+        Max : {{toolConfigForm.controls['pomodoroCount'].errors['max'].max}}
+      </div>
+      <div *ngIf="toolConfigForm.controls['pomodoroCount'].errors['min']">
+        Min : {{toolConfigForm.controls['pomodoroCount'].errors['min'].min}}
+      </div>
+    </div>
+
+    <p class="estimate">
+      <span *ngIf="estimateTimeObj.workTime.hour"><strong>{{estimateTimeObj.workTime.hour}}h </strong> </span>
+      <span *ngIf="estimateTimeObj.workTime.hour && estimateTimeObj.workTime.min"> & </span>
+      <span *ngIf="estimateTimeObj.workTime.min"><strong>{{estimateTimeObj.workTime.min}}m </strong></span>
+      <span>{{'intro.form.estimate.workTime' | translate}}, </span>
+
+      <span *ngIf="estimateTimeObj.pauseTime.hour"><strong>{{estimateTimeObj.pauseTime.hour}}h </strong></span>
+      <span *ngIf="estimateTimeObj.pauseTime.hour && estimateTimeObj.pauseTime.min"> & </span>
+      <span *ngIf="estimateTimeObj.pauseTime.min"><strong>{{estimateTimeObj.pauseTime.min}}m </strong></span>
+      <span>{{'intro.form.estimate.pauseTime' | translate}}, </span>
+
+      <span>{{'intro.form.estimate.totalTime' | translate}} </span>
+      <span *ngIf="estimateTimeObj.totalTime.hour"><strong>{{estimateTimeObj.totalTime.hour}}h </strong></span>
+      <span *ngIf="estimateTimeObj.totalTime.hour && estimateTimeObj.totalTime.min"> & </span>
+      <span *ngIf="estimateTimeObj.totalTime.min"><strong>{{estimateTimeObj.totalTime.min}}m </strong></span>
+    </p>
+
+
+  </form>
+
+
+
+
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{'intro.form.dropDownLabel' | translate}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{'intro.form.dropDownDesc' | translate}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+
+    <form [formGroup]="toolConfigForm">
+      <hr>
+      <label>
+        {{'intro.form.workTime' | translate}}
+        <span class="nbsp"><input type="number" formControlName="wTime">min.</span>
+      </label>
+      <div class="err" *ngIf="toolConfigForm.controls['wTime'].status === 'INVALID'">
+        <div *ngIf="toolConfigForm.controls['wTime'].errors['max']">
+          Max : {{toolConfigForm.controls['wTime'].errors['max'].max}}
+        </div>
+        <div *ngIf="toolConfigForm.controls['wTime'].errors['min']">
+          Min : {{toolConfigForm.controls['wTime'].errors['min'].min}}
+        </div>
+      </div>
+
+
+
+      <hr>
+
+      <label>
+        {{'intro.form.shortBreakTime' | translate}}
+        <span class="nbsp"><input type="number" formControlName="srTime">min.</span>
+
+      </label>
+      <div class="err" *ngIf="toolConfigForm.controls['srTime'].status === 'INVALID'">
+        <div *ngIf="toolConfigForm.controls['srTime'].errors['max']">
+          Max : {{toolConfigForm.controls['srTime'].errors['max'].max}}
+        </div>
+        <div *ngIf="toolConfigForm.controls['srTime'].errors['min']">
+          Min : {{toolConfigForm.controls['srTime'].errors['min'].min}}
+        </div>
+      </div>
+
+
+
+      <hr>
+
+      <label>
+        {{'intro.form.longBreakTime' | translate}}
+        <span class="nbsp"><input type="number" formControlName="lrTime">min.</span>
+      </label>
+      <div class="err" *ngIf="toolConfigForm.controls['lrTime'].status === 'INVALID'">
+        <div *ngIf="toolConfigForm.controls['lrTime'].errors['max']">
+          Max : {{toolConfigForm.controls['lrTime'].errors['max'].max}}
+        </div>
+        <div *ngIf="toolConfigForm.controls['lrTime'].errors['min']">
+          Min : {{toolConfigForm.controls['lrTime'].errors['min'].min}}
+        </div>
+      </div>
+
+
+
+      <hr>
+      <label>
+        {{'intro.form.numberOfPomodoroBetweenLongRest' | translate}}
+        <input type="number" formControlName="timeBetweenLr">
+      </label>
+      <div class="err" *ngIf="toolConfigForm.controls['timeBetweenLr'].status === 'INVALID'">
+        <div *ngIf="toolConfigForm.controls['timeBetweenLr'].errors['max']">
+          Max : {{toolConfigForm.controls['timeBetweenLr'].errors['max'].max}}
+        </div>
+        <div *ngIf="toolConfigForm.controls['timeBetweenLr'].errors['min']">
+          Min : {{toolConfigForm.controls['timeBetweenLr'].errors['min'].min}}
+        </div>
+      </div>
+
+
+
+    </form>
+    <hr>
+    <button class="reset-btn" (click)="resetForm()">{{'intro.form.resetBtn' | translate}}</button>
+
+
+  </mat-expansion-panel>
+
+</div>

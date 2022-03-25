@@ -1,0 +1,59 @@
+@import '../../../variables.scss';
+$bubble-w : 20px;
+$bubble-w-mobile : 15px;
+
+:host {
+  gap: 20px 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+.step-card {
+  @extend %shadow;
+  padding: 15px;
+  background-color: $primary-color;
+  position: relative;
+
+  h3 {
+    margin: 0 0 15px 0;
+  }
+}
+
+.num-step {
+  position: absolute;
+  line-height: normal;
+  top: -$bubble-w / 2.2;
+  text-align: center;
+  left: -$bubble-w / 2.2;
+  height: $bubble-w;
+  width: $bubble-w;
+  border-radius: 50%;
+  background-color: $secondary-color;
+  border: 1px solid $third-color;
+  color: $third-color;
+  font-weight: 600;
+
+  .number {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    display: inline-block;
+  }
+}
+
+@media only screen and (max-width: $mobile-view-br)  {
+  :host{
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .num-step{
+      top: -$bubble-w-mobile / 2.5;
+      left: -$bubble-w-mobile / 2.5;
+      height: $bubble-w-mobile;
+      width: $bubble-w-mobile;
+  }
+  .number{
+      vertical-align: middle;
+  }
+}

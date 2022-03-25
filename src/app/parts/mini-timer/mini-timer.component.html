@@ -1,0 +1,21 @@
+<div class="mini-timer-wrapper">
+    <div class="container">
+        <div class="row message">
+            <div class="col-sm-12">
+                <h3>{{'phase.' + currentNode.type | translate}} </h3>
+            </div>
+        </div>
+        <div class="row message">
+            <div class="col-sm-12">
+                <p>{{'miniTimer.' + currentNode.type | translate}} </p>
+            </div>
+        </div>
+        <div class="row counter">
+            <div class="col-sm-12">
+                <div *ngIf="true" class="counter-wrapper">
+                    <span>{{currentNode.currentTime | counter}}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

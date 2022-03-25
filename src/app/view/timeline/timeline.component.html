@@ -1,0 +1,31 @@
+<div class="page-wrapper">
+  <app-menue></app-menue>
+  <app-mini-timer></app-mini-timer>
+  <section id="timeline">
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-12">
+          <p class="overview">{{'timeline.overview' | translate}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="timer-mobile">
+
+          </div>
+          <div class="thegrid">
+            <app-timeline-node *ngFor="let node of coreService.timeLine" [nodeRadius]="250" [nodeStrokeWidth]="8"
+              [id]="node['id']" [nodeData]="node">
+            </app-timeline-node>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bottom-part">
+    <app-control></app-control>
+    <app-footer></app-footer>
+  </div>
+</div>

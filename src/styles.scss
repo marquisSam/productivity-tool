@@ -1,0 +1,210 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$productivity-tool-primary: mat.define-palette(mat.$indigo-palette);
+$productivity-tool-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$productivity-tool-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$productivity-tool-theme: mat.define-light-theme((
+  color: (
+    primary: $productivity-tool-primary,
+    accent: $productivity-tool-accent,
+    warn: $productivity-tool-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($productivity-tool-theme);
+
+@import 'variables';
+
+.container{
+  width: 80%;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  max-width: 1200px;
+  @media only screen and (max-width: $mobile-view-br)  {
+    width: 100%;
+    padding: 0 20px;
+  }
+}
+body{
+  .mat-expansion-panel{
+    font-size: 0.8em;
+  }
+  margin:0;
+  font-size: 0.8em;
+  *{
+    box-sizing:border-box;
+  }
+  h1,h2,h3,h4{
+  	color:$color-dark;
+	font-family: $font-main;
+  }
+  h2{
+    font-size: 1.8em;
+    font-weight: 200;
+    margin-top: 0;
+  }
+  p{
+    color:$color-dark;
+    margin-bottom: 16px;
+	  font-family: $font-main;
+  }
+}
+
+section {
+	padding: $section-padding 0;
+  &.zebra{
+    color: $third-color;
+    background-color: $secondary-color;
+  }
+}
+mat-tooltip-component>.mat-tooltip {
+  white-space: pre;
+}
+.showtooltip{
+  color: $third-color;
+}
+.section-content {
+	@extend %shadow;
+	padding: $content-padding;
+	background-color: $primary-color;
+}
+
+// overrigth material default style
+.mat-expansion-panel{
+	.mat-expansion-panel-header {
+		padding: 0 $content-padding;
+		border-radius: $b-radius;
+	}
+}
+
+
+// -----------------------BTN-----------------------
+button{
+	@extend %reset-Button;
+	@extend %shadow;
+  @extend %animation;
+  width: 100%;
+	border-radius: $b-radius;
+	background-color: $third-color;
+	padding: 15px;
+	color:$color-light;
+  // font-family: $font-input;
+	&:hover{
+		cursor:pointer;
+		background-color:darken($third-color,5%);
+	}
+	&:disabled{
+		cursor:default;
+		background-color:lighten($third-color,15%);
+
+
+	}
+}
+// -----------------------BTN END-----------------------
+
+
+.thewrapper{
+  min-height: 100vh;
+}
+app-footer{
+  margin-top: auto;
+}
+// -----------------------FORMS-----------------------
+form{
+  margin: 0;
+  display: block;
+  margin-bottom: 20px;
+}
+label{
+  display: block;
+  // font-size: 21px;
+  span{
+    color:$color-dark;
+    // font-size: 36px;
+    font-family: $font-main;
+  }
+  margin: 10px 0;
+}
+input{
+    // border-radius: $b-radius;
+    width: 70px;
+
+    color:$color-dark;
+    // background-color: lighten($contrast-color, 30) ;
+    font-family: $font-input;
+    // font-size: 36px;
+    // vertical-align: top;
+    margin: 0 12px;
+    margin-left: 0;
+    border: none;
+    text-align: center;
+    outline: none;
+    padding: 0px;
+    border-bottom: 1px solid $contrast-color;
+    &.ng-invalid{
+    	border-bottom: 2px solid red;
+    }
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+// -----------------------FORMS END-----------------------
+.step-block-wrapper{
+	padding-bottom: 30px;
+	.step-block-content{
+	//   padding: $content-padding;
+	  background-color: $primary-color;
+	}
+}
+
+@media only screen and (max-width: $mobile-view-br)  {
+  body{
+    font-size: 0.7em;
+
+  }
+  .step-block-wrapper{
+    padding-bottom: 15px;
+  }
+  .section-content {
+    p{
+      margin-bottom: 7px;
+    }
+    padding: $content-padding/2;
+  }
+  section {
+    h2{
+      text-align: center;
+    }
+    // padding: 25px 0;
+    &.zebra{
+      color: $third-color;
+      background-color: $secondary-color;
+    }
+  }
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

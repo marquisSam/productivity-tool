@@ -1,0 +1,68 @@
+@import '../../../variables';
+
+:host{
+  position: fixed;
+  bottom: $footer-h;
+  right: 0;
+  opacity: 0.8;
+  transition: all 200ms cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
+  transition-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530); /* easeInQuad */
+
+  &.hidden{
+    opacity: 0.6;
+    right: -145px;
+  }
+}
+.control{
+  padding: 20px;
+  padding-left: 60px;
+  background: aquamarine;
+  position: relative;
+  border: 1px solid $contrast-color;
+  border-right: 0;
+  border-radius: 40px 0px 0px 40px;
+}
+.arrow{
+  position: absolute;
+  top: 50%;
+  box-shadow: none;
+  background-color: transparent;
+  transform: translateY(-50%);
+  left :0px;
+  width: auto;
+  svg{
+    fill: $contrast-color;
+    height: 24px;
+    width: 24px;
+    transform: rotate(180deg);
+  }
+}
+.button-wrapper button{
+    border-radius: 50%;
+    background-color: $contrast-color;
+    height: 45px;
+    width: 45px;
+    padding: 5px;
+    position: relative;
+    svg{
+      @extend %animation;
+      // position: absolute;
+      position: absolute;
+      height: 60%;
+      top: 50%;
+      transform: translateY(-50%);
+      fill: #67e0c6;
+      left: 0;
+      width: 100%;
+    }
+    &:hover{
+      // padding: 5px;
+      svg{
+        height: 75%;
+      }
+      outline: none;
+    }
+    &:first-of-type{
+      margin-right: 15px;
+    }
+  }

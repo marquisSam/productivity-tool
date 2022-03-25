@@ -1,0 +1,71 @@
+@import '../../variables';
+
+.start-row {
+  display: flex;
+
+  button[type="submit"] {
+    max-width: 50px;
+  }
+}
+
+label {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+
+button {
+  font-size: 1.5em;
+  background-color: $contrast-color;
+  margin-left: auto;
+  padding: 10px;
+
+  &:hover {
+    background-color: darken($contrast-color, 5%);
+  }
+
+  &[disabled] {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+
+
+.reset-btn {
+  font-size: 1em;
+  margin-left: auto;
+  padding: 5px 10px;
+  width: auto;
+}
+
+.estimate {
+  margin: 0;
+  font-size: 0.7em;
+}
+
+.err {
+  margin-bottom: 10px;
+  font-size: 0.6rem;
+  color: red;
+}
+
+hr {
+  margin: 20px 0px;
+  opacity: 0.35;
+}
+
+.nbsp {
+  white-space: nowrap;
+}
+
+
+@media only screen and (max-width: $mobile-view-br) {
+  label {
+    font-size: 1rem;
+    margin-top: 0;
+  }
+
+  button {
+    margin-bottom: 15px;
+  }
+}

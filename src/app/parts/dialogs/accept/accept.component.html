@@ -1,0 +1,11 @@
+<h2 mat-dialog-title>{{"dialog.confirm-title" | translate}}</h2>
+<div mat-dialog-actions>
+  <div class="control-bar">
+    <div class="button-box">
+      <button mat-button cdkFocusInitial (click)="onNoClick()">{{"dialog.no" | translate}}</button>
+    </div>
+    <div class="button-box">
+      <button mat-button (click)="onYesClick()">{{"dialog.yes" | translate}}</button>
+    </div>
+  </div>
+</div>

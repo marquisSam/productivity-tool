@@ -1,0 +1,73 @@
+@import '../../../variables';
+// #timeline{
+//   position: absolute;
+//   width: 100%;
+//   top: 50%;
+//   transform: translateY(-50%);
+// }
+.thegrid{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr [node-row]);
+  align-content: center;
+  justify-content: center;
+  grid-gap: 20px;
+}
+.page-wrapper{
+  padding-bottom:$footer-control-h ;
+  position: relative;
+  min-height: 100vh;
+}
+
+.node-name{
+  display: inline;
+}
+
+.bottom-part{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+.overview{
+  font-size: 0.8em;
+  margin-bottom: $section-padding;
+}
+@media only screen and (max-width: $mobile-view-br)  {
+  .overview{
+    font-size: 1em;
+    text-align: center;
+    margin-bottom: $section-padding;
+  }
+  .thegrid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr [node-row]);
+    align-content: center;
+    justify-content: center;
+    grid-gap: 20px;
+  }
+}
+// @media all and (min-width: map-get($bp-app, xs)){
+//   .thegrid{
+//     grid-template-columns: repeat(2, 1fr [node-row]);
+//   }
+// }
+// @media all and (min-width: map-get($bp-app, sm)){
+//   .thegrid{
+//     grid-template-columns: repeat(2, 1fr [node-row]);
+//   }
+// }
+// @media all and (min-width: map-get($bp-app, md)){
+//   .thegrid{
+//     grid-template-columns: repeat(3, 1fr [node-row]);
+//   }
+// }
+// @media all and (min-width: map-get($bp-app, lg)){
+//   .thegrid{
+//     grid-template-columns: repeat(4, 1fr [node-row]);
+//   }
+// }
+// @media all and (min-width: map-get($bp-app, xl)){
+//   .thegrid{
+//     grid-template-columns: repeat(5, 1fr [node-row]);
+//   }
+// }

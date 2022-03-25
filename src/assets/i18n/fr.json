@@ -1,0 +1,81 @@
+{
+  "intro": {
+    "toolName": "L'outil d'optimisation du temps de travail",
+    "explain": {
+      "title": "Apprendre et travailler avec efficacité",
+      "p1": "Cet outil fut inspiré par <a target='_blank' href='https://francescocirillo.com/pages/pomodoro-technique'> la technique du pomodoro </a> développé par Francesco Cirillo. J'espère que ça puisse augmenter votre productivité tout en balançant le focus entre repos et concentration.",
+      "p2": "Le fait de vous fixer un objectif avant même de commencer à travailler peut aider à se focaliser sur un plus long terme.",
+      "p3": "Un \"bloc\" de travaille consiste en une période de concentration suivit d'une période de repos. Vous n'avez qu'à entrer le nombre de bloc que vous souhaiter accomplir et appuyer sur <span class='color-contrast'>Go!<span>"
+    },
+    "form": {
+        "estimate" : {
+          "workTime" : "de concentration",
+          "pauseTime" : "de pause",
+          "totalTime" : "pour une session équivalente à"
+        },
+        "title" : "Sélectionner vos préférence et commencé le travail!",
+        "fit" : "Je veux placer",
+        "workBlock" : "<span class='showtooltip' matTooltip='Un bloc de travail equivaux à un bloc de concentration et un bloc de repos.'>bloc(s) de travail</span> dans cette session.",
+        "dropDownLabel":"Plus d'options",
+        "dropDownDesc":"Modifier les temps",
+        "workTime": "Durée de la phase de travail:",
+        "shortBreakTime": "Durée du repos court:",
+        "longBreakTime": "Durée du repos long:",
+        "resetBtn": "Réinitialiser",
+        "numberOfPomodoroBetweenLongRest": "Nombre de pomodoro avant le repos long:"
+    },
+    "step": {
+      "title": "Étapes",
+      "1" : {
+        "title":"Planifier la tâche",
+        "body":"Que ce soit de l'étude, du travail ou n'imporque quois qui demande une attention soutenue, l'important est de bien cerner une tâche spécifique et bien balisé ainsi que la quantité de temps à y accordée." 
+      },
+      "2" : {
+        "title":"Concentration",
+        "body":"Quand vient le temps de prendre le taureau par les cornes, allouer TOUTE votre attention à la tâche. Éteigner votre téléphone, réseaux sociaux et autre distractions." 
+      },
+      "3" : {
+        "title":"Prendre une petite pause",
+        "body":"Après le premier, le deuxième et le troisième bloc de travail, prenez une petites pause de quelque minute. Consultez, vos émail, lisez une B-D où encore faite quelques exercises." 
+      },
+      "4" : {
+        "title":"La longue pause",
+        "body":"Aux quatrième bloc, prenez une pause plus consistante. Allez prendre une marche dehors ou écoutez une courte série." 
+      },
+      "5" : {
+        "title":"Objectif",
+        "body":"Recommencé la séquence jusqu'à ce que votre objectif de travail soit atteint. Et enfin, soyer fier de vous!"
+      }
+    }
+  },
+  "timeline": {
+    "overview": "Visualisation de la progression"
+  },
+  "control": {
+    "play": "Marche",
+    "pause": "Arrêt"
+  },
+  "dialog": {
+    "confirm-title": "Voulez-vous recommencer?",
+    "no": "Non",
+    "yes": "Oui"
+  },
+  "phase": {
+    "w": "Concentration",
+    "sr": "Repos court",
+    "g": "Objectif",
+    "lr": "Repos long"
+  },
+  "node-shortened": {
+    "w": "Concent.",
+    "sr": "Repos C.",
+    "g": "Obj.",
+    "lr": "Repos L."
+  },
+  "miniTimer": {
+    "w": "Phase de concentration, lâche pas!",
+    "g": "Objectif atteint, Bien jouée!",
+    "sr": "Donne-toi une petite pause!",
+    "lr": "Maintenant permet toi une plus longue pause!"
+  }
+}

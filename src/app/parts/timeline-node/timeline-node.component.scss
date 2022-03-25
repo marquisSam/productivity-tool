@@ -1,0 +1,73 @@
+@import '../../../variables';
+
+:host{
+  height: 100%;
+  position: relative;
+  text-align: center;
+}
+@import '../../../variables';
+.counter{
+  @media only screen and (max-width: $mobile-view-br)  {
+    display: none;   
+  }
+}
+
+.node-info{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    .node-name{
+      @include transition();
+      font-size: 0.6rem;
+      // line-height: 1.8rem;
+      display: block;
+    }
+    .counter{
+      margin-top: 5px;
+    }
+}
+
+
+
+circle{
+  @include transition();
+  position: absolute;
+  transition-property : stroke, fill;
+  top: 0;
+  fill: #fff;
+  left: 0;
+}
+.cricle{
+  position: absolute;
+  width: 101%;
+  height: 101%;
+  top: -2px;
+  background: rgba(234,234,222,0.5);
+  border-radius: 50%;
+  .point-circle{
+    position: absolute;
+    top: -3;
+    @extend %animation;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+  }
+}
+.goal{
+  circle{
+      fill: $secondary-color;
+  }
+  .node-info{
+    .node-name{
+      color: $primary-color;
+    }
+  }
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "intro": {
+    "toolName": "Working session optimizing tool",
+    "explain": {
+      "title": "Support a simple technique for working/learning with efficiency.",
+      "p1": "This tool is greatly inspired by <a target='_blank' href='https://francescocirillo.com/pages/pomodoro-technique'> the Pomodoro technique </a> developed by Francesco Cirillo, hope that this will put a bit more productivity into your life by tracking the time you 'r spending between working out your brain and resting it.",
+      "p2": "Fixing yourself an objectif before starting to work can help you focusing for a longer period.",
+      "p3": "A \"working block\" refers to a focusing period followed by a resting period. You only need to specify the number of working blocks that you wish to accomplish for this session and press <span class='color-contrast'>Go!<span>"
+    },
+    "form": {
+        "estimate" : {
+          "workTime" : "of focus time",
+          "pauseTime" : "of pause time",
+          "totalTime" : "for a total session of"
+        },
+        "title" : "Set The timeline and start working!",
+        "fit" : "I want to fit",
+        "workBlock" : "<span class='showtooltip' matTooltip='One work block(s) equal a work time and rest time'>work block</span> in this session.",
+        "dropDownLabel":"More options",
+        "dropDownDesc":"Customize timings",
+        "workTime": "Work period duration:",
+        "shortBreakTime": "Short break duration:",
+        "longBreakTime": "Long break duration:",
+        "resetBtn": "Reset to default",
+        "numberOfPomodoroBetweenLongRest": "Number of Pomodoro between long rest:"
+    },
+    "step": {
+      "title": "steps",
+      "1" : {
+        "title":"Planning the task",
+        "body":"May it be studying, working, or anything else that require your unwavering attention, the main part is to clearly grasp the task at hand and evaluate the required time to put into it. And, ofcourse, to stick to it." 
+      },
+      "2" : {
+        "title":"focus",
+        "body":"When come the time to give it all, allocate EVERY bit of your attention to it during the devoted time. That mean no phone,no facebook, no youtube, no distractions!"
+      },
+      "3" : {
+        "title":"Rest a little",
+        "body":"After the first, second and third focus session, grant yourself a couple minutes break. You can check on your e-mail, watch a video, or anything that will let you rest your brain." 
+      },
+      "4" : {
+        "title":"Rest longer on your fourth block",
+        "body":"After the fourth focus session, take a longer break (25 min). Go take a walk or read a BD, something that make you happy."
+      },
+      "5" : {
+        "title":"Goal",
+        "body":"Rince and repeat until the time goal is attained. And, finally, just be proud of yourself!"
+      }
+    }
+  },
+  "timeline": {
+    "overview": "Progression overview"
+  },
+  "control": {
+    "play": "Play",
+    "pause": "Pause"
+  },
+  "dialog": {
+    "confirm-title": "Do you want to restart?",
+    "no": "No",
+    "yes": "Yes"
+  },
+  "phase": {
+    "w": "Working",
+    "sr": "Short rest",
+    "g": "Goal",
+    "lr": "Long rest"
+  },
+  "node-shortened": {
+    "w": "Work...",
+    "sr": "S.Rest",
+    "g": "Goal",
+    "lr": "L.Rest"
+  },
+  "miniTimer": {
+    "w": "Work phase, Keep on going!",
+    "sr": "Take a short break!",
+    "g": "Goal reached, Well done!",
+    "lr": "Now treat yourself to a longer break!"
+  }
+}

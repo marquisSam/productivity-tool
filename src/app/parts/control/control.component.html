@@ -1,0 +1,10 @@
+<div class="control">
+<!-- <div class="control" [ngClass]="{hidden : hidden}"> -->
+  <button class="arrow" (click)="toggleHidden()">
+    <svg><use xlink:href="./assets/imgs/arrowIcon.svg#arrow"></use></svg>
+  </button>
+  <div class="button-wrapper">
+    <button type="button" (click)="toggleBtn()"><svg><use attr.xlink:href="{{toggleTimer ? './assets/imgs/pause.svg#pause' : './assets/imgs/play-button.svg#play'}}"></use></svg></button>
+    <button type="button" (click)="openDialog()"><svg><use xlink:href="./assets/imgs/redo.svg#redo"></use></svg></button>
+  </div>
+</div>
